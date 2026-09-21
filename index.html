@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Valentyn Bahinskyi — 3D Artist</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ОДНА общая карточка: шапка + ссылки + работы + низ -->
+  <div class="card single">
+
+    <header class="hero">
+      <!-- Аватарка: файл img/avatar.jpg, меняется через admin.html -->
+      <img id="avatar" class="avatar" src="img/avatar.jpg" alt="Valentyn Bahinskyi logo" />
+
+      <h1 id="artistName" class="artist-name">Valentyn Bahinskyi</h1>
+      <h2 id="artistRole" class="artist-role">3D Artist · Hard Surface · Game-Ready Assets</h2>
+      <p id="artistAbout" class="subtitle">Creating detailed PBR 3D models for games, visualization and digital environments.</p>
+
+      <!-- ВСЕ ссылки в ОДНУ строчку: соцсети | магазины -->
+      <div class="links-merged one-line">
+        <div class="link-group" id="socialRow">
+          <div class="icon-row">
+            <!-- Значки лежат файлами в icons/. Чтобы заменить: положи свой файл
+                 в icons/ и поменяй src ниже. Источники нынешних: Simple Icons (соцсети, Unity),
+                 официальный вектор TurboSquid, логотип fab.com -->
+            <a href="https://instagram.com/" target="_blank" title="Instagram" class="icon" data-link="instagram">
+              <img class="icon-img" src="icons/instagram.svg" alt="Instagram">
+              <span>IG</span>
+            </a>
+            <a href="https://youtube.com/" target="_blank" title="YouTube" class="icon" data-link="youtube">
+              <img class="icon-img" src="icons/youtube.svg" alt="YouTube">
+              <span>YT</span>
+            </a>
+            <a href="https://artstation.com/" target="_blank" title="ArtStation 3D" class="icon" data-key="art3d" data-link="art3d">
+              <img class="icon-img" src="icons/artstation.svg" alt="ArtStation">
+              <span>Art 3D</span>
+            </a>
+            <!-- Art 2D ВРЕМЕННО СКРЫТ: убери комменты ниже чтобы вернуть
+            <a href="https://artstation.com/" target="_blank" title="ArtStation 2D" class="icon with-tag" data-key="art2d" data-link="art2d">
+              <img class="icon-img" src="icons/artstation.svg" alt="ArtStation">
+              <span>Art 2D</span>
+              <em>2D</em>
+            </a>
+            -->
+          </div>
+          <div class="group-label">social</div>
+        </div>
+        <div class="v-sep"></div>
+        <div class="link-group" id="storesRow">
+          <div class="icon-row stores">
+            <!-- Fab: настоящий логотип (чёрный → инвертирован в белый классом inv).
+                 CGTrader: буквы в фирменном бирюзовом — замени на свой файл:
+                 <img class="icon-img" src="icons/cgtrader.png" alt="CGTrader"> -->
+            <a href="https://fab.com/" target="_blank" class="icon" title="Fab" data-link="fab"><img class="icon-img inv" src="icons/fab.png" alt="Fab"><span>Fab</span></a>
+            <a href="https://assetstore.unity.com/" target="_blank" class="icon" title="Unity Asset Store" data-link="unity"><img class="icon-img" src="icons/unity.svg" alt="Unity"><span>Unity</span></a>
+            <!-- CGTrader: твой файл icons/cgtrader.png (чёрный знак → класс inv делает его белым под тёмную тему) -->
+            <a href="https://cgtrader.com/" target="_blank" class="icon" title="CGTrader" data-link="cgtrader"><img class="icon-img inv" src="icons/cgtrader.png" alt="CGTrader"><span>CGTrader</span></a>
+            <a href="https://turbosquid.com/" target="_blank" class="icon" title="TurboSquid" data-link="turbosquid"><img class="icon-img" src="icons/turbosquid.svg" alt="TurboSquid"><span>TurboSquid</span></a>
+          </div>
+          <div class="group-label">stores</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- плоский переход без разрыва карточки -->
+    <div class="flat-sep with-title"><span>SELECTED WORKS</span></div>
+
+    <main>
+      <div id="works"></div>
+
+      <div id="worksFallback">
+        <article class="work-flat">
+        <div class="carousel" data-images='["img/work1_1.jpg","img/work1_2.jpg","img/work1_3.jpg"]'>
+          <button class="car-btn prev" aria-label="Previous">‹</button>
+          <img src="img/work1_1.jpg" alt="Sci-Fi Generator Unit" />
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="counter">1 / 3</div>
+            <div class="dots"></div>
+          </div>
+          <div class="work-info">
+            <h3>Sci-Fi Generator Unit</h3>
+            <div class="buy-links"><span>Buy on:</span><a href="https://fab.com/" target="_blank">FAB</a><a href="https://cgtrader.com/" target="_blank">CGTrader</a><a href="https://assetstore.unity.com/" target="_blank">Unity Asset Store</a></div>
+          </div>
+        </article>
+        <article class="work-flat">
+        <div class="carousel" data-images='["img/work2_1.jpg","img/work2_2.jpg","img/work2_3.jpg"]'>
+          <button class="car-btn prev" aria-label="Previous">‹</button>
+          <img src="img/work2_1.jpg" alt="Tactical Drone" />
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="counter">1 / 3</div>
+            <div class="dots"></div>
+          </div>
+          <div class="work-info">
+            <h3>Tactical Drone MK-II</h3>
+            <div class="buy-links"><span>Buy on:</span><a href="https://fab.com/" target="_blank">FAB</a><a href="https://cgtrader.com/" target="_blank">CGTrader</a><a href="https://assetstore.unity.com/" target="_blank">Unity Asset Store</a></div>
+          </div>
+        </article>
+        <article class="work-flat">
+        <div class="carousel" data-images='["img/work3_1.jpg","img/work3_2.jpg","img/work3_3.jpg"]'>
+          <button class="car-btn prev" aria-label="Previous">‹</button>
+          <img src="img/work3_1.jpg" alt="Environment Pack" />
+            <button class="car-btn next" aria-label="Next">›</button>
+            <div class="counter">1 / 3</div>
+            <div class="dots"></div>
+          </div>
+          <div class="work-info">
+            <h3>Industrial Environment Pack</h3>
+            <div class="buy-links"><span>Buy on:</span><a href="https://fab.com/" target="_blank">FAB</a><a href="https://cgtrader.com/" target="_blank">CGTrader</a><a href="https://assetstore.unity.com/" target="_blank">Unity Asset Store</a></div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+  </div><!-- /single -->
+
+</div>
+
+<script src="config.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
